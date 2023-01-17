@@ -4,9 +4,39 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="robots" content="noindex">
-        <title itemprop="name">セゾンマネースクール｜生命保険から損害保険のご相談・資料請求は保険＠SAISON CARD</title>
+        <title itemprop="name">Webhodegi_compare_table</title>
     </head>
   <body>
+    <script>//スプレッドシートIDの指定と必要なJSONデータの取得
+$data = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQoB1q9LQfRxWSxBoRVBk0z_Wh53L3Kqe-dAanzLS9bGaC36dpQCdDuJ6glMnh7oc43RHHh52lyu999/pubhtml?gid=0&single=true";
+$json = file_get_contents($data);
+$json_decode = json_decode($json);
+$posts = $json_decode->feed->entry;
+
+//データを配列で取得・格納
+$genre = [];
+$name = [];
+$price = [];
+$description = [];
+
+foreach ($posts as $post) {
+    $genre[] = $post->{'gsx$genre'}->{'$t'};
+    $name[] = $post->{'gsx$name'}->{'$t'};
+    $price[] = $post->{'gsx$price'}->{'$t'};
+    $description[] = $post->{'gsx$description'}->{'$t'};
+}
+
+//取得したJSONデータをソースコードに出力する
+for ($i=0; $i<count($genre); $i++) {
+    if (!$name[$i]) {
+        echo '<h3 id="' . $price[$i] . '">' . $genre[$i] . '</h3>';
+        continue;
+    }
+    echo '<h4>' . $name[$i] . '</h4>';
+    echo '<div class="price"><span>' . $price[$i] . '</span></div>';
+    echo '<p>' . $description[$i] . '</p>';
+}
+    </script>
   <script>foreach ($posts as $post) {
     $genre[] = $post->{'gsx$genre'}->{'$t'};
     $name[] = $post->{'gsx$name'}->{'$t'};
