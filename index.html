@@ -2,56 +2,76 @@
 <lang="ja">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="robots" content="noindex">
         <title itemprop="name">Webhodegi_compare_table</title>
-    </head>
+        <link rel="stylesheet" href="/Users/masaaki/Documents/GitHub/webhodegi/stylesheet.css">
+      </head>
   <body>
-      <style>
-      iframe {
-        width: 100%;
-        height: 1000px;
-      }
-        </style>
-    <script>//スプレッドシートIDの指定と必要なJSONデータの取得
-$data = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQoB1q9LQfRxWSxBoRVBk0z_Wh53L3Kqe-dAanzLS9bGaC36dpQCdDuJ6glMnh7oc43RHHh52lyu999/pubhtml?gid=0&single=true";
-$json = file_get_contents($data);
-$json_decode = json_decode($json);
-$posts = $json_decode->feed->entry;
-
-//データを配列で取得・格納
-$genre = [];
-$name = [];
-$price = [];
-$description = [];
-
-foreach ($posts as $post) {
-    $genre[] = $post->{'gsx$genre'}->{'$t'};
-    $name[] = $post->{'gsx$name'}->{'$t'};
-    $price[] = $post->{'gsx$price'}->{'$t'};
-    $description[] = $post->{'gsx$description'}->{'$t'};
-}
-
-//取得したJSONデータをソースコードに出力する
-for ($i=0; $i<count($genre); $i++) {
-    if (!$name[$i]) {
-        echo '<h3 id="' . $price[$i] . '">' . $genre[$i] . '</h3>';
-        continue;
-    }
-    echo '<h4>' . $name[$i] . '</h4>';
-    echo '<div class="price"><span>' . $price[$i] . '</span></div>';
-    echo '<p>' . $description[$i] . '</p>';
-}
-    </script>
-  <script>foreach ($posts as $post) {
-    $genre[] = $post->{'gsx$genre'}->{'$t'};
-    $name[] = $post->{'gsx$name'}->{'$t'};
-    $price[] = $post->{'gsx$price'}->{'$t'};
-    $description[] = $post->{'gsx$description'}->{'$t'};
-}
-  </script>
-  
-  <hr>
+  <div class="header">
+    <div class="header_inner">
+        <img class="hodegi_logo" src="http://www.financial-agency.com/service/wp-content/uploads/2023/01/ct_header.png">
+      <div class="cta_area">
+        <div class="btn_simulation">
+          <a href="#"><img src="http://www.financial-agency.com/service/wp-content/uploads/2023/01/ct_simulation_btn.png"></a>
+        </div>
+        <div class="btn_result">
+          <a href="#"><img src="http://www.financial-agency.com/service/wp-content/uploads/2023/01/ct_result_btn.png"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="filtering_area">
+    <div class="categories">
+      <h2>保険の種類</h2>
+      <div class="categories_ins">
+        <a class="medical_ins" href="#">医療保険</a>
+        <a class="cancer_ins" href="#">がん保険</a>
+        <a class="lifetime_ins" href="#">死亡保険(終身)</a>
+        <a class="life_regular_ins" href="#">死亡保険(定期)</a>
+        <a class="income_security_ins" href="#">収入保障保険</a>
+      </div>
+    </div>
+    <div class="budget">
+      <h2>保険料の予算（月払い）</h2>
+      <div class="budget_radios">
+          <input type="radio" id="radio1" name="budget_radios" value="none" checked> <label class="budget_radios" for="radio1">指定なし</label>
+          <input type="radio" id="radio2" name="budget_radios" value="3000" > <label class="budget_radios" for="radio2">〜3,000円</label>
+          <input type="radio" id="radio3" name="budget_radios"> <label class="budget_radios" for="radio3">〜5,000円</label>
+          <input type="radio" id="radio4" name="budget_radios"> <label class="budget_radios" for="radio4">〜8,000円</label>
+          <input type="radio" id="radio5" name="budget_radios"> <label class="budget_radios" for="radio5">〜10,000円</label>
+          <input type="radio" id="radio6" name="budget_radios"> <label class="budget_radios" for="radio6">〜15,000円</label>
+          <input type="radio" id="radio7" name="budget_radios"> <label class="budget_radios" for="radio7">〜20,000円</label>
+          <input type="radio" id="radio8" name="budget_radios"> <label class="budget_radios" for="radio8">〜30,000円</label>
+    </div>
+    <p>（↑選んだ金額内の商品を表示）</p>
+    <div class="sort_ranking">
+      <h2>並べ替え</h2>
+      <div class="sort_ranking_radios">
+        <input type="radio" id="sort_ranking_radio1" name="sort_ranking_radios" checked> <label class="sort_ranking_radios" for="sort_ranking_radio1">保険料が安い順</label>
+        <input type="radio" id="sort_ranking_radio2" name="sort_ranking_radios"> <label class="sort_ranking_radios" for="sort_ranking_radio2">保険料が高い順</label>
+        <input type="radio" id="sort_ranking_radio3" name="sort_ranking_radios"> <label class="sort_ranking_radios" for="sort_ranking_radio3">保障額が多い順</label>
+        <input type="radio" id="sort_ranking_radio4" name="sort_ranking_radios"> <label class="sort_ranking_radios" for="sort_ranking_radio4">保障額が少ない順</label>
+      </div>
+    </div>
+    <p>（↑選んだ内容でランキング表示）</p>
+  </div>
+  <div class="conditions">
+    <select class="condition_age" name="age">
+      <option>0歳</option>
+      <option>1歳</option>
+      <option>2歳</option>
+      <option>3歳</option>
+      <option>4歳</option>
+      <option>5歳</option>
+      <option>60歳</option>
+    </select>
+    <select class="condition_sex" name="sex">
+      <option>男性</option>
+      <option>女性</option>
+    </select>
+    <p>（↑選んだ年齢性別で保険料表示）</p>
+  </div>
+</div>
   <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQoB1q9LQfRxWSxBoRVBk0z_Wh53L3Kqe-dAanzLS9bGaC36dpQCdDuJ6glMnh7oc43RHHh52lyu999/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 </body>
 </html>
