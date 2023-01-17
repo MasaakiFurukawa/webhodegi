@@ -7,6 +7,12 @@
         <title itemprop="name">Webhodegi_compare_table</title>
     </head>
   <body>
+      <style>
+      iframe {
+        width: 100%;
+        height: 1000px;
+      }
+        </style>
     <script>//スプレッドシートIDの指定と必要なJSONデータの取得
 $data = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQoB1q9LQfRxWSxBoRVBk0z_Wh53L3Kqe-dAanzLS9bGaC36dpQCdDuJ6glMnh7oc43RHHh52lyu999/pubhtml?gid=0&single=true";
 $json = file_get_contents($data);
@@ -47,11 +53,5 @@ for ($i=0; $i<count($genre); $i++) {
   
   <hr>
   <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQoB1q9LQfRxWSxBoRVBk0z_Wh53L3Kqe-dAanzLS9bGaC36dpQCdDuJ6glMnh7oc43RHHh52lyu999/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-  </body>
-      <style>
-  iframe {
-    width: 100%;
-    height: 1000px;
-  }
-    </style>
+</body>
 </html>
