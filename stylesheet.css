@@ -44,8 +44,9 @@ iframe {
 }
 
 img.hodegi_logo {
-  margin: 1vw;
-  width: 40vw;
+  margin: 0 1vw;
+  width: min(30vw,432px);
+  vertical-align: middle;
 }
 
 .cta_area {
@@ -55,8 +56,7 @@ img.hodegi_logo {
 }
 
 .cta_area img {
-  width: 25vw;
-  height: 5.5vw;
+  height: min(4.5vw,648px);
 }
 
 .filtering_area {
