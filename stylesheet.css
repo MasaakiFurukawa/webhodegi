@@ -181,7 +181,7 @@ select {
 }
 
 .modal-header h2 {
-  margin: 1rem 0;
+  margin: 1rem 1rem;
 }
 
 
@@ -196,6 +196,7 @@ select {
 
 .modalClose {
   font-size: 2rem;
+  margin: 0.5rem;
 }
 
 .modalClose:hover {
@@ -205,4 +206,15 @@ select {
 .modal-body {
   padding: 10px 20px;
   color: black;
+}
+
+.keep_btn {
+  background-color: #002769;
+  color: #ffffff;
+  padding: 14.4px 0vw;
+  border-radius: 5px;
+  margin: 5vw auto 0 auto;
+  width: 104px;
+  font-size: 1em;
+  text-align: center;
 }
