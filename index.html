@@ -168,6 +168,7 @@
           <input type="checkbox" id="modal_detail_selects10" name="modal_detail"> <label class="modal_detail10" for="modal_detail_selects10">j</label>
           <input type="checkbox" id="modal_detail_selects11" name="modal_detail"> <label class="modal_detail11" for="modal_detail_selects11">k</label>
         </div>
+        <div class="modalClose keep_btn"><p>保存</p></div>
       </div>
     </div>
     <script>
@@ -186,7 +187,7 @@
       function modalClose() {
         modal.style.display = 'none';
       }
-      
+
       // モーダルコンテンツ以外がクリックされた時
       addEventListener('click', outsideClose);
       function outsideClose(e) {
