@@ -2,9 +2,10 @@
 <lang="ja">
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="robots" content="noindex">
         <title itemprop="name">Webhodegi_compare_table</title>
-        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="/Users/masaaki/Documents/GitHub/webhodegi/stylesheet.css">
       </head>
   <body>
   <div class="header">
@@ -20,6 +21,7 @@
       </div>
     </div>
   </div>
+  <p class="attention">※このページは「Web保デジ比較表」のデモページです。デザインや文字は本番の実装ページと概ね同様ですが、選択肢ボタンやチェックボックスなどのフィルタリング等は機能していません。本番の実装ページは現在開発中で、完成時にはボタンやチェックボックスを押下した時に比較表の中の商品ラインナップや保険料等の表示が変化するように実装します。（挙動の補足は<span class="attention_text">青字</span>で補記しております。）募集文書申請のご担当社様におかれましては、上記をご理解の上、ご指摘・ご意見をいただきますようよろしくお願いいたします。なお、当ページ内の全社共通項目に関しましては修正要求に添えない場合もあり、相談をさせていただく場合もございますので予めご了承ください。</p>
   <div class="filtering_area">
     <div class="categories">
       <h2>保険の種類</h2>
@@ -32,7 +34,8 @@
       </div>
     </div>
     <div class="budget">
-      <h2>保険料の予算（月払い）</h2>
+      <h2>保険料の予算（月払い）</h2>    
+      <p class="attention_text">（↓選んだ金額内の商品を表示）</p>
       <div class="budget_radios">
           <input type="radio" id="radio1" name="budget_radios" value="none" checked> <label class="budget_radios" for="radio1">指定なし</label>
           <input type="radio" id="radio2" name="budget_radios" value="3000" > <label class="budget_radios" for="radio2">〜3,000円</label>
@@ -43,9 +46,9 @@
           <input type="radio" id="radio7" name="budget_radios"> <label class="budget_radios" for="radio7">〜20,000円</label>
           <input type="radio" id="radio8" name="budget_radios"> <label class="budget_radios" for="radio8">〜30,000円</label>
     </div>
-    <p>（↑選んだ金額内の商品を表示）</p>
     <div class="sort_ranking">
       <h2>並べ替え</h2>
+      <p class="attention_text">（↓選んだランキングで表示順を変更　※「保険料ランキング」の順位の数字は変更しない）</p>
       <div class="sort_ranking_radios">
         <input type="radio" id="sort_ranking_radio1" name="sort_ranking_radios" checked> <label class="sort_ranking_radios" for="sort_ranking_radio1">保険料が安い順</label>
         <input type="radio" id="sort_ranking_radio2" name="sort_ranking_radios"> <label class="sort_ranking_radios" for="sort_ranking_radio2">保険料が高い順</label>
@@ -53,9 +56,9 @@
         <input type="radio" id="sort_ranking_radio4" name="sort_ranking_radios"> <label class="sort_ranking_radios" for="sort_ranking_radio4">保障額が少ない順</label>
       </div>
     </div>
-    <p>（↑選んだ内容でランキング表示）</p>
   </div>
   <div class="conditions">
+    <p class="attention_text">（↓選んだ年齢性別で保険料が変わる仕様）</p>
     <select class="condition_age" name="age">
       <option>0歳</option>
       <option>1歳</option>
@@ -63,13 +66,135 @@
       <option>3歳</option>
       <option>4歳</option>
       <option>5歳</option>
+      <option>6歳</option>
+      <option>7歳</option>
+      <option>8歳</option>
+      <option>9歳</option>
+      <option>10歳</option>
+      <option>11歳</option>
+      <option>12歳</option>
+      <option>13歳</option>
+      <option>14歳</option>
+      <option>15歳</option>
+      <option>16歳</option>
+      <option>17歳</option>
+      <option>18歳</option>
+      <option>19歳</option>
+      <option>20歳</option>
+      <option>21歳</option>
+      <option>22歳</option>
+      <option>23歳</option>
+      <option>24歳</option>
+      <option>25歳</option>
+      <option>26歳</option>
+      <option>27歳</option>
+      <option>28歳</option>
+      <option>29歳</option>
+      <option selected>30歳</option>
+      <option>31歳</option>
+      <option>32歳</option>
+      <option>33歳</option>
+      <option>34歳</option>
+      <option>35歳</option>
+      <option>36歳</option>
+      <option>37歳</option>
+      <option>38歳</option>
+      <option>39歳</option>
+      <option>40歳</option>
+      <option>41歳</option>
+      <option>42歳</option>
+      <option>43歳</option>
+      <option>44歳</option>
+      <option>45歳</option>
+      <option>46歳</option>
+      <option>47歳</option>
+      <option>48歳</option>
+      <option>49歳</option>
+      <option>50歳</option>
+      <option>51歳</option>
+      <option>52歳</option>
+      <option>53歳</option>
+      <option>54歳</option>
+      <option>55歳</option>
+      <option>56歳</option>
+      <option>57歳</option>
+      <option>58歳</option>
+      <option>59歳</option>
       <option>60歳</option>
+      <option>61歳</option>
+      <option>62歳</option>
+      <option>63歳</option>
+      <option>64歳</option>
+      <option>65歳</option>
+      <option>66歳</option>
+      <option>67歳</option>
+      <option>68歳</option>
+      <option>69歳</option>
+      <option>70歳</option>
+      <option>71歳</option>
+      <option>72歳</option>
+      <option>73歳</option>
+      <option>74歳</option>
+      <option>75歳</option>
+      <option>76歳</option>
+      <option>77歳</option>
+      <option>78歳</option>
+      <option>79歳</option>
+      <option>80歳</option>
+      <option>81歳</option>
+      <option>82歳</option>
+      <option>83歳</option>
+      <option>84歳</option>
+      <option>85歳</option>
     </select>
     <select class="condition_sex" name="sex">
       <option>男性</option>
       <option>女性</option>
     </select>
-    <p>（↑選んだ年齢性別で保険料表示）</p>
+      <button id="modalOpen" class="detail_btn">詳細設定　＋</button> 
+    <div id="Modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header"><h2>詳細設定</h2><span class="modalClose">×</span></div>
+        <div class="modal-body">
+          <input type="checkbox" id="modal_detail_selects1" name="modal_detail"> <label class="modal_detail1" for="modal_detail_selects1">a</label>
+          <input type="checkbox" id="modal_detail_selects2" name="modal_detail"> <label class="modal_detail2" for="modal_detail_selects2">b</label>
+          <input type="checkbox" id="modal_detail_selects3" name="modal_detail"> <label class="modal_detail3" for="modal_detail_selects3">c</label>
+          <input type="checkbox" id="modal_detail_selects4" name="modal_detail"> <label class="modal_detail4" for="modal_detail_selects4">d</label>
+          <input type="checkbox" id="modal_detail_selects5" name="modal_detail"> <label class="modal_detail5" for="modal_detail_selects5">e</label>
+          <input type="checkbox" id="modal_detail_selects6" name="modal_detail"> <label class="modal_detail6" for="modal_detail_selects6">f</label>
+          <input type="checkbox" id="modal_detail_selects7" name="modal_detail"> <label class="modal_detail7" for="modal_detail_selects7">g</label>
+          <input type="checkbox" id="modal_detail_selects8" name="modal_detail"> <label class="modal_detail8" for="modal_detail_selects8">h</label>
+          <input type="checkbox" id="modal_detail_selects9" name="modal_detail"> <label class="modal_detail9" for="modal_detail_selects9">i</label>
+          <input type="checkbox" id="modal_detail_selects10" name="modal_detail"> <label class="modal_detail10" for="modal_detail_selects10">j</label>
+          <input type="checkbox" id="modal_detail_selects11" name="modal_detail"> <label class="modal_detail11" for="modal_detail_selects11">k</label>
+        </div>
+      </div>
+    </div>
+    <script>
+    const buttonOpen = document.getElementById('modalOpen');
+      const modal = document.getElementById('Modal');
+      const buttonClose = document.getElementsByClassName('modalClose')[0];
+      
+      // ボタンがクリックされた時
+      buttonOpen.addEventListener('click', modalOpen);
+      function modalOpen() {
+        modal.style.display = 'block';
+      }
+      
+      // バツ印がクリックされた時
+      buttonClose.addEventListener('click', modalClose);
+      function modalClose() {
+        modal.style.display = 'none';
+      }
+      
+      // モーダルコンテンツ以外がクリックされた時
+      addEventListener('click', outsideClose);
+      function outsideClose(e) {
+        if (e.target == modal) {
+          modal.style.display = 'none';
+        }
+      }
+      </script>
   </div>
 </div>
   <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQoB1q9LQfRxWSxBoRVBk0z_Wh53L3Kqe-dAanzLS9bGaC36dpQCdDuJ6glMnh7oc43RHHh52lyu999/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
