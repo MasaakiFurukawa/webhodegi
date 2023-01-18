@@ -113,7 +113,7 @@ select {
   width: 13vw;
   height: 3.5vw;
   border-radius: 5px;
-  font-size: 1.5vw;
+  font-size: min(1.5vw,22px);
   padding-left: 2vw;
   border: solid #B5B5B5;
 }
