@@ -33,9 +33,20 @@ body{
 }
 
 iframe {
-  width: 100%;
+  width: 95%;
   height: 1000px;
   margin-left: 5vw;
+}
+
+.attention_text {
+  color: #5590d0;
+}
+p.attention_text {
+  font-size: 0.75em;
+  border: solid #B5B5B5 1px;
+  border-radius: 3px;
+  background-color: #f3f3f3;
+  padding: 3px;
 }
 
 .header {
@@ -56,6 +67,17 @@ img.hodegi_logo {
 
 .cta_area img {
   height: min(4.5vw,64.8px);
+}
+
+.attention {
+  width: 80%;
+  margin: 21px auto;
+  font-size: 11px;
+  color: gray;
+  border: solid #B5B5B5 2px;
+  border-radius: 3px;
+  background-color: #f3f3f3;
+  padding: 10px;
 }
 
 .filtering_area {
@@ -116,4 +138,71 @@ select {
   font-size: min(1.5vw,22px);
   padding-left: 2vw;
   border: solid #B5B5B5;
+}
+
+
+/* modal */
+.detail_btn {
+  background-color: #ED702D;
+  color: #FFFFFF;
+  width: 14vw;
+  height: 3.5vw;
+  border-radius: 5px;
+  font-size: min(1.5vw,22px);
+  border: solid #B5B5B5;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #FFFFFF;
+  color: #000000;
+  margin: 20% auto;
+  width: 50%;
+  height: 50%;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+  animation-name: modalopen;
+  animation-duration: 1s;
+  border-radius: 25px;
+}
+
+@keyframes modalopen {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+.modal-header h2 {
+  margin: 1rem 0;
+}
+
+
+.modal-header {
+  background: #002769;
+  color: #FFFFFF;
+  padding: 3px 15px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 25px 25px 0 0;
+}
+
+.modalClose {
+  font-size: 2rem;
+}
+
+.modalClose:hover {
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 10px 20px;
+  color: black;
 }
