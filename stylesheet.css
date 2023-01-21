@@ -34,8 +34,19 @@ body{
 
 iframe {
   width: 95%;
-  height: 1000px;
+  height: 3000px;
   margin-left: 5vw;
+}
+
+.attention {
+  width: 80%;
+  margin: 21px auto;
+  font-size: 11px;
+  color: gray;
+  border: solid #B5B5B5 1px;
+  border-radius: 3px;
+  background-color: #f3f3f3;
+  padding: 10px;
 }
 
 .attention_text {
@@ -64,21 +75,151 @@ img.hodegi_logo {
   display: flex;
   margin: 1vw;
 }
+.btn_simulation {
+  margin-right: min(20vw,288px);
+  
+}
 
 .cta_area img {
   height: min(4.5vw,64.8px);
 }
 
-.attention {
-  width: 80%;
-  margin: 21px auto;
-  font-size: 11px;
-  color: gray;
-  border: solid #B5B5B5 2px;
-  border-radius: 3px;
-  background-color: #f3f3f3;
-  padding: 10px;
+
+
+
+
+
+
+
+.drawer_hidden {
+  display: none;
 }
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  z-index: 2;/* 重なり順を一番上にする */
+  cursor: pointer;
+}
+/* メニューのデザイン*/
+.nav_content {
+  width: 37%;
+  height: 89%;
+  position: fixed;
+  top: 10%;
+  right: -37%;
+  z-index: 2;
+  background: white;
+  transition: .5s;
+  padding: 20px;
+  border: solid 0.5px #000000;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+  right: 1%;
+}
+
+
+
+p.nav_content_title_detail {
+  font-size: 0.75em;
+}
+.in_estimate {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.consultation_attention {
+  font-size: 0.5em;
+}
+.estimate_content_area {
+  overflow: scroll;
+  height: 52%;
+}
+.estimate_content {
+  margin: 1.5vw 0;
+}
+.estimate_content {
+  display: flex;
+}
+
+.insurance_product_area {
+  display: flex;
+  flex-direction: column;
+}
+img.product_logo {
+  margin: auto;
+}
+p.insurance_conpany_name {
+  font-size: 1vw;
+  text-align: center;
+}
+
+.product_content h4 {
+  font-size: 1vw;
+}
+p.product_security_content {
+  font-size: 1vw;
+}
+.product_content {
+  margin: 0 1vw;
+  width: 10vw;
+}
+p.insurance_fee {
+  font-size: 1.25vw;
+  font-weight: 600;
+  margin: 1vw 1vw 0 0;
+}
+.estinate_content_cta_area img {
+  width: 8vw;
+  height: auto;
+}
+p.delete_btn {
+  font-size: 0.75vw;
+  text-align: center;
+  text-decoration: underline;
+  color: #5B5B5B;
+}
+
+.estimate_total {
+  display: flex;
+  justify-content: space-around;
+}
+.estimate_total h3 {
+  font-size: 1.5vw;
+}
+p.estimate_total_money {
+  font-size: 1.5vw;
+  font-weight: 600;
+}
+
+.cta_fp_consultation {
+  background-color: #002769;
+  color: white;
+  width: 80%;
+  margin: 0.5vw 0 1vw 0;
+  margin-left: 20%;
+  border-radius: 20px;
+}
+p.fp_consultation_text {
+  text-align: center;
+  font-size: 1.25vw;
+  padding: 0.25vw;
+}
+
+p.estimate_attention_text {
+  font-size: 0.75vw;
+}
+
+
+
+
+
 
 .filtering_area {
   margin-left: 10vw;
@@ -107,7 +248,7 @@ img.hodegi_logo {
 .categories h2 {
   margin-bottom: 1vw;
 }
-.budget_radios label ,.sort_ranking_radios label{
+.budget_radios label ,.sort_ranking_radios label ,.modal_detail {
   background-color: #FFFFFF;
   border: solid #B5B5B5 1px;
   padding: 1vw 2vw;
@@ -119,6 +260,13 @@ img.hodegi_logo {
 }
 .conditions {
   margin-bottom: 3.472vw;
+}
+.conditions_detail {
+  display: flex;
+}
+.conditions_detail h3 {
+  font-weight: 500;
+  color:#4a3b3b;
 }
 
 input[type=radio] {
@@ -138,8 +286,11 @@ select {
   font-size: min(1.5vw,22px);
   padding-left: 2vw;
   border: solid #B5B5B5;
+  margin-right: 10px;
 }
-
+select.security_content {
+  width: 21vw;
+}
 
 /* modal */
 .detail_btn {
@@ -154,7 +305,7 @@ select {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   left: 0;
   top: 0;
   height: 100%;
@@ -217,4 +368,22 @@ select {
   width: 104px;
   font-size: 1em;
   text-align: center;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+input[type="checkbox"]:checked + .modal_detail {
+  background-color: #002769;
+  color: #ffffff;
+  padding: 1vw 2vw;
+  border-radius: 5px
+}
+
+
+footer {
+  width: 100%;
+  background-color: #012B67;
+  color: #ffffff;
+  padding: 3vw;
 }
