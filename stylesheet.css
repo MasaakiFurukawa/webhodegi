@@ -230,17 +230,17 @@ p.estimate_attention_text {
   margin-top: 3vw;
 }
 
-.medical_ins {
-  color: #FFFFFF;
-  background-color: #002769;
+
+.medical_ins,.cancer_ins,.lifetime_ins,.life_regular_ins,.income_security_ins {
+  color: #000000;
+  background-color: #FFFFFF;
   border: solid #B5B5B5 1px;
   padding: 1vw;
   border-radius: 5px;
 }
-
-.cancer_ins,.lifetime_ins,.life_regular_ins,.income_security_ins {
-  color: #000000;
-  background-color: #FFFFFF;
+.ins_paged {
+  color: #FFFFFF;
+  background-color: #002769;
   border: solid #B5B5B5 1px;
   padding: 1vw;
   border-radius: 5px;
