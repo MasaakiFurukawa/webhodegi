@@ -34,8 +34,9 @@ body{
 
 iframe {
   width: 95%;
-  height: 2000px;
+  height: 3000px;
   margin-left: 5vw;
+  border: 1px solid #B5B5B5;
 }
 
 .attention {
@@ -386,4 +387,59 @@ footer {
   background-color: #012B67;
   color: #ffffff;
   padding: 3vw;
+}
+
+
+
+
+
+/* ↓商品ページcss */
+.iframe_product_page {
+  width: 63vw;
+  height: 1500px;
+  margin-left: 10vw;
+  margin-top: -70px;
+}
+.waffle-embedded-object-overlay {
+  border: 0px solid !important;
+}
+.product_page_container {
+  display: flex;
+}
+
+.right_container {
+  background-color: white;
+  margin: 2vw;
+  width: 230px;
+  padding: 2vw;
+  position: fixed;
+  right: 1.5vw;
+  box-shadow: 0 1px 5px 0 rgb(0 0 0 / 50%);
+}
+
+.company_name {
+  border-left:5px solid #ED702D;
+  padding:2px 8px;
+}
+.company_name span {
+  font-weight: 400;
+  font-size: 0.75em;
+}
+.right_net_application,.right_fp_consulting_btn,.right_reflect_estimate_result_btn {
+  width: 180px;
+  margin: auto;
+}
+img.product_img {
+  width: 180px;
+  margin: 10px 0;
+}
+.monthly_premium {
+  color: #002769;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+.monthly_premium_amount {
+  color: #ED702D;
+  font-size: 1.5em;
+  margin-left: 6px;
 }
