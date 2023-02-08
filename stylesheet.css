@@ -400,7 +400,10 @@ footer {
   color: #ffffff;
   padding: 3vw;
 }
-
+a.footer_link {
+  color: white;
+  margin-right: 13px;
+}
 
 
 
