@@ -470,3 +470,6 @@ img.product_img {
   height: auto;
   margin: auto;
 }
+img.result_estimate {
+    border: solid red 5px;
+}
