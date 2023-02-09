@@ -458,3 +458,10 @@ img.product_img {
   font-size: 1.5em;
   margin-left: 6px;
 }
+
+
+/*　結果ページcss　*/
+.result_body img{
+  width: 688px;
+  height: auto;
+}
