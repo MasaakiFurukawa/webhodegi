@@ -461,7 +461,12 @@ img.product_img {
 
 
 /*　結果ページcss　*/
+.result_body {
+  width: 550px;
+  margin: auto;
+}
 .result_body img{
-  width: 688px;
+  width: 550px;
   height: auto;
+  margin: auto;
 }
