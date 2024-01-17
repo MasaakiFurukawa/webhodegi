@@ -472,3 +472,15 @@ img.product_img {
 img.result_estimate {
   border: solid red 5px;
 }
+
+.pattern {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -66%;
+    width: 1280px;
+}
+.pattern img {
+    width: 420px;
+    margin: 0;
+    height: 100%;
+}
