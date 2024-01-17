@@ -484,3 +484,16 @@ img.result_estimate {
     margin: 0;
     height: 100%;
 }
+p.pattern_male {
+    width: 100%;
+    text-align: center;
+    font-size: 39px;
+    color: darkblue;
+    margin-bottom: 15px;
+}p.pattern_female {
+    width: 100%;
+    text-align: center;
+    font-size: 39px;
+    color: hotpink;
+    margin-bottom: 15px;
+}
