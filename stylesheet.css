@@ -476,11 +476,11 @@ img.result_estimate {
 .pattern {
     display: flex;
     flex-wrap: wrap;
-    margin: 0px -100%;
-    width: 1600px;
+    margin: 0px -87%;
+    width: 1504px;
 }
 .pattern img {
-    width: 530px;
+    width: 500px;
     margin: 0;
     height: 100%;
 }
